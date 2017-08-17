@@ -58,9 +58,9 @@ namespace AkavacheSample
 					var invalidateCache = (force || elapsed > new TimeSpan(24, 0, 0));
 					return invalidateCache;
 				})
-				.Subscribe((cities) =>
+				.Subscribe((breaches) =>
 				{
-                    _breaches.ReplaceRange(cities);
+                    _breaches.ReplaceRange(breaches);
 				});
 		}
 
